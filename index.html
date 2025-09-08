@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ferreteria Mapocho</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        <!--HEADER CON INSERCION DEL NAVBAR CON JS-->
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navigator"></nav>
+            <div class="container-fluid d-flex justify-content-end p-1">
+                <a class="btn btn-primary me-2" href="html/registro.html">
+                    Registro
+                </a>
+                <a class="btn btn-outline-secondary" href="html/login.html">
+                    Login
+                </a>
+            </div>
+        </header>
+
+        <main>
+                <!-- Descripción de la empresa -->
+            <div class="card m-3 shadow-lg border-0">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                    
+                    <!-- Texto -->
+                    <div class="col-md-8 text-start">
+                        <h1 class="fw-bold mb-3">Ferretería Mapocho</h1>
+                        <h5 class="text-muted mb-3">Tu aliado en construcción y mejoramiento del hogar</h5>
+                        
+                        <p class="mb-3">
+                        En Ferretería Mapocho encontrarás <strong>herramientas de calidad, materiales confiables y atención personalizada</strong> para tus proyectos. 
+                        </p>
+                        <p class="mb-4">
+                        Nos destacamos por ofrecer <em>precios competitivos</em>, asesoría técnica y un catálogo siempre actualizado.
+                        </p>
+
+                        <a href="html/productos.html" class="btn btn-primary btn-lg">
+                        🔨 Ver productos
+                        </a>
+                    </div>
+
+                    <!-- Imagen -->
+                    <div class="col-md-4 text-center">
+                        <img src="assets/img/local.webp" class="img-fluid rounded shadow-sm p-1" alt="local">
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TENGO QUE EDITAR LO DEL CONTENEDOR-->
+            <div class="container my-5">
+                <div class="row" id="productos-container"></div>
+            </div>   
+        </main>
+        <!--FOOTER CON INSERCION  JS-->
+        <footer class="bg-light border-top py-4 mt-auto">
+            <div class="container py-4" id="footer"></div>
+        </footer>
+    </body>
+    
+    <script src="assets/js/navFooter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
