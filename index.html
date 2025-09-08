@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ferreteria Mapocho</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/style.css"> </head>
+        <link rel="stylesheet" href="assets/css/style.css"> 
+    </head>
 
     <body class="d-flex flex-column min-vh-100">
         <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navigator">
-                </nav>
-            <div class="container-fluid d-flex justify-content-end p-1">
+            </nav>
+            <div class="container-fluid d-flex justify-content-end p-3">
                 <a class="btn btn-primary me-2" href="html/registro.html">
                     Registro
                 </a>
@@ -26,37 +27,120 @@
                 <div class="card-body">
                     <div class="row align-items-center">
                     
-                    <div class="col-md-8 text-start">
-                        <h1 class="fw-bold mb-3">Ferretería Mapocho</h1>
-                        <h5 class="text-muted mb-3">Tu aliado en construcción y mejoramiento del hogar</h5>
-                        
-                        <p class="mb-3">
-                        En Ferretería Mapocho encontrarás <strong>herramientas de calidad, materiales confiables y atención personalizada</strong> para tus proyectos. 
-                        </p>
-                        <p class="mb-4">
-                        Nos destacamos por ofrecer <em>precios competitivos</em>, asesoría técnica y un catálogo siempre actualizado.
-                        </p>
+                        <div class="col-md-8 text-start">
+                            <h1 class="fw-bold mb-3">Ferretería Mapocho</h1>
+                            <h5 class="text-muted mb-3">Tu aliado en construcción y mejoramiento del hogar</h5>
+                            
+                            <p class="mb-3">
+                            En Ferretería Mapocho encontrarás <strong>herramientas de calidad, materiales confiables y atención personalizada</strong> para tus proyectos. 
+                            </p>
+                            <p class="mb-4">
+                            Nos destacamos por ofrecer <em>precios competitivos</em>, asesoría técnica y un catálogo siempre actualizado.
+                            </p>
 
-                        <a href="html/productos.html" class="btn btn-primary btn-lg">
-                        🔨 Ver productos
-                        </a>
+                            <a href="html/productos.html" class="btn btn-primary btn-lg">
+                            🔨 Ver todos los productos
+                            </a>
+                        </div>
+
+                        <div class="col-md-4 text-center">
+                            <img src="assets/img/local.webp" class="img-fluid rounded shadow-sm p-1" alt="local">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center bg-body-tertiary py-4 mt-5">
+                <h3 class="fw-bold">Nuestros Productos Destacados</h3>
+                <p class="text-muted">Una selección de las mejores herramientas para tus proyectos</p>
+            </div>
+
+            <div class="container my-5">
+                <div class="row g-4" id="productos">
+                    
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://i5.walmartimages.com/seo/Hyper-Tough-6-Amp-1-2-inch-Corded-Hammer-Drill-Keyed-Chuck-120-Volt-TD6HD_33dda335-baae-4d41-86bc-8f858c63f1f8.ddfc48223d2a77393b8a6d6e4637d54a.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" class="card-img-top p-3" alt="Taladro Percutor">
+                            <div class="card-body d-flex flex-column text-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2">
+                                        <a href="html/producto.html?id=1" class="text-decoration-none text-dark">Taladro Percutor Inalámbrico 20V</a>
+                                    </h5>
+                                    <p class="card-text text-muted small mb-2">Potente y versátil, ideal para perforar en madera, metal y hormigón.</p>
+                                    <p class="fw-bold fs-5 text-primary mb-3">$79.990</p>
+                                </div>
+                                <div class="d-grid gap-2 mt-auto">
+                                    <a class="btn btn-dark btn-sm" href="html/producto.html?id=1">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-md-4 text-center">
-                        <img src="assets/img/local.webp" class="img-fluid rounded shadow-sm p-1" alt="local">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://m.media-amazon.com/images/I/5127Hhq1exL._AC_US100_.jpg" class="card-img-top p-3" alt="Set de Herramientas">
+                            <div class="card-body d-flex flex-column text-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2">
+                                        <a href="html/producto.html?id=2" class="text-decoration-none text-dark">Set de Herramientas 120 Piezas</a>
+                                    </h5>
+                                    <p class="card-text text-muted small mb-2">Completo maletín con todo lo necesario para reparaciones en el hogar.</p>
+                                    <p class="fw-bold fs-5 text-primary mb-3">$45.990</p>
+                                </div>
+                                <div class="d-grid gap-2 mt-auto">
+                                    <a class="btn btn-dark btn-sm" href="html/producto.html?id=2">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://i5.walmartimages.com/seo/DEWALT-Angle-Grinder-Tool-7-Inch-13-Amp-DW840_7afa12a3-0364-4f47-a885-4d4398ac96e0.b417e37bf0d100ca4b2f7c9f4296422d.png?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF" class="card-img-top p-3" alt="Esmeril Angular">
+                            <div class="card-body d-flex flex-column text-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2">
+                                        <a href="html/producto.html?id=3" class="text-decoration-none text-dark">Esmeril Angular 4 1/2" 820W</a>
+                                    </h5>
+                                    <p class="card-text text-muted small mb-2">Herramienta robusta para trabajos de corte y desbaste de metales.</p>
+                                    <p class="fw-bold fs-5 text-primary mb-3">$34.990</p>
+                                </div>
+                                <div class="d-grid gap-2 mt-auto">
+                                    <a class="btn btn-dark btn-sm" href="html/producto.html?id=3">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="card h-100 shadow-sm border-0">
+                            <img src="https://i5.walmartimages.com/seo/Hyper-Tough-20V-6-5in-Brushless-Circular-saw-with-2-0Ah-Battery-Pack-and-Standard-Charger-41007-2_34f7beb0-0e33-4370-89f4-d38f699c3196.5c0fe1522bafaf1e3c1b28352be32197.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF" class="card-img-top p-3" alt="Caja de Herramientas">
+                            <div class="card-body d-flex flex-column text-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-2">
+                                        <a href="html/producto.html?id=4" class="text-decoration-none text-dark">Caja de Herramientas Metálica 20"</a>
+                                    </h5>
+                                    <p class="card-text text-muted small mb-2">Resistente y espaciosa para organizar y transportar tus herramientas.</p>
+                                    <p class="fw-bold fs-5 text-primary mb-3">$29.990</p>
+                                </div>
+                                <div class="d-grid gap-2 mt-auto">
+                                    <a class="btn btn-dark btn-sm" href="html/producto.html?id=4">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             
         </main>
         <footer class="bg-light border-top py-4 mt-auto">
             <div class="container py-4" id="footer">
-                </div>
+            </div>
         </footer>
     </body>
-    
+    <script src="assets/js/productos.js"></script>
     <script src="assets/js/navFooter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>

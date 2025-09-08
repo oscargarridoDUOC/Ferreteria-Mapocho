@@ -19,22 +19,23 @@ function renderProductos() {
     let html = '';
     productos.forEach(producto => {
         html += `
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="${producto.imagen}" class="card-img-top p-3" alt="Producto">
-                    <div class="card-body text-center">
-                        <h5 class="card-title fw-bold mb-2">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card h-100 shadow-sm border-0"> 
+                <img src="${producto.imagen}" class="card-img-top p-3" alt="Producto">
+                <div class="card-body d-flex flex-column text-center">
+                    <div> <h5 class="card-title fw-bold mb-2">
                             <a href="producto.html?id=${producto.id}" class="text-decoration-none text-dark">${producto.nombre}</a>
                         </h5>
                         <p class="card-text text-muted small mb-2">${producto.descripcion}</p>
-                        <p class="fw-bold fs-5 text-primary mb-3">$${producto.precio}</p>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-outline-primary btn-sm add-to-cart" data-id="${producto.id}">Agregar al carrito 🛒</button>
-                            <a class="btn btn-dark btn-sm" href="producto.html?id=${producto.id}">Ver detalles</a>
                         </div>
+                        <div class="d-grid gap-2 mt-auto">
+                        <p class="fw-bold fs-5 text-primary mb-3">$${producto.precio}</p>
+                        <button class="btn btn-outline-primary btn-sm add-to-cart" data-id="${producto.id}">Agregar al carrito 🛒</button>
+                        <a class="btn btn-dark btn-sm" href="producto.html?id=${producto.id}">Ver detalles</a>
                     </div>
                 </div>
             </div>
+        </div>
         `;
     });
     return html;
