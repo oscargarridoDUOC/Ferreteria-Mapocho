@@ -1,0 +1,5 @@
+.imagen-contenedor {
+    width: 25%; 
+    max-width: 100px;
+    flex-shrink: 0; 
+}

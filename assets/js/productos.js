@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Escuchar el clic en los botones de "Agregar al carrito"
+    // ESCUCHA LOS BOTONES PARA AGREGAR AL CARRITO DESDE EL PREVIEW DEL PRODUCTO
     document.getElementById("productos").addEventListener('click', (e) => {
         if (e.target.classList.contains('add-to-cart')) {
             const productId = e.target.dataset.id;
@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Renderizar productos
+    //RENDERIZA LOS PRODUCTOS
     document.getElementById("productos").innerHTML = renderProductos();
 });
-
+//FUNCIÓN PARA RENDERIZAR PRODUCTOS
 function renderProductos() {
     let html = '';
     productos.forEach(producto => {
@@ -40,7 +40,7 @@ function renderProductos() {
     return html;
 }
 
-// Función para agregar al carrito
+// FUNCIÓN PARA AGREGAR AL CARRITO
 function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingItem = cart.find(item => item.id === product.id);
@@ -53,7 +53,6 @@ function addToCart(product) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     
-    // Aquí es donde añades las líneas
     if (typeof renderCartCount !== 'undefined') {
         renderCartCount();
     }

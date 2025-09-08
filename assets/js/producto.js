@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     renderProducto();
 
-    // Evento para el botón de 'Añadir al carrito'
+    // EVENTO PARA AÑADIR AL CARRITO
     const addToCartButton = document.getElementById("btn-add-to-cart");
 
     if (addToCartButton) {
         addToCartButton.addEventListener('click', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const productoId = urlParams.get('id');
-            
-            // Suponiendo que el array 'productos' está cargado globalmente
+
             const productoEncontrado = productos.find(p => p.id == productoId);
 
             if (productoEncontrado) {
@@ -22,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+//FUNCIÓN PARA RENDERIZAR LOS PRODUCTOS
 function renderProducto() {
     const urlParams = new URLSearchParams(window.location.search);
     const productoId = urlParams.get('id');
@@ -34,7 +34,7 @@ function renderProducto() {
         document.getElementById("precioProducto").innerText = `$${productoEncontrado.precio.toLocaleString()}`;
 
         const carouselInner = document.getElementById("carousel-imagenes");
-        carouselInner.innerHTML = ''; // Limpia el carrusel antes de llenarlo
+        carouselInner.innerHTML = ''; // LIMPIA EL CARROUSEL ANTES DE LLENARLO
 
         productoEncontrado.imagenes.forEach((imagenUrl, index) => {
             const carouselItem = document.createElement('div');
@@ -51,7 +51,7 @@ function renderProducto() {
     }
 }
 
-// Función para agregar al carrito
+// FUNCIÓN PARA AGREGAR AL CARRITO
 function addToCart(product) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingItem = cart.find(item => item.id === product.id);
@@ -64,7 +64,6 @@ function addToCart(product) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    // Llama a la función de tu navFooter para actualizar el contador
     if (typeof renderCartCount !== 'undefined') {
         renderCartCount();
     }

@@ -1,22 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inserta el contenido del nav y el footer solo si los elementos existen
-    const navigatorElement = document.getElementById("navigator");
-    if (navigatorElement) {
-        navigatorElement.innerHTML = navBar();
-    }
+    // INSERTA NAVBAR Y FOOTER
+    document.getElementById("navigator").innerHTML = navBar();
+    document.getElementById("footer").innerHTML = footer();
 
-    const footerElement = document.getElementById("footer");
-    if (footerElement) {
-        footerElement.innerHTML = footer();
-    }
-
-    // Llama a la función que contiene la lógica para el formulario de suscripción
+    // VERIFICA SUBSCRIPCIÓN
     checkSub();
     
-    // Llama a la función para actualizar el contador del carrito
+    // ACTUALIZA CONTADOR CARRITO
     renderCartCount();
 });
-
+//FUNCION PARA INSERTAR EL NAVBAR
 function navBar() {
     return `
         <div class="container-fluid">
@@ -29,7 +22,7 @@ function navBar() {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="/index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/html/productos.html">Productos</a>
@@ -44,15 +37,15 @@ function navBar() {
                         <a class="nav-link" href="/html/contacto.html">Contacto</a>
                     </li>
                 </ul>
-                <a href="/html/carrito.html" id="cart">
-                    🛒
-                    <span id="cuenta-carrito">0</span>
+                <a href="/html/carrito.html" id="cart" class="text-decoration-none">
+                    <span class="fs-4">🛒</span>
+                    <span id="cuenta-carrito" class="ms-2">0</span>
                 </a>
             </div>
         </div>
     `;
 }
-
+//FUNCIÓN PARA INSERTAR EL FOOTER
 function footer() {
     return `
         <div class="container">
@@ -76,7 +69,7 @@ function footer() {
     `;
 }
 
-// Nueva función para actualizar el contador del carrito
+//FUNCION PARA EL CONTADOR DEL CARRITO
 function renderCartCount() {
     const cuentaCarritoSpan = document.getElementById("cuenta-carrito");
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -85,12 +78,12 @@ function renderCartCount() {
         cuentaCarritoSpan.innerText = totalItems;
     }
 }
-
+//FUNCION PARA SUBSCRIBIRSE
 function checkSub(){
-    // Asigna el evento al formulario de suscripción
+    // LINKEA CON EL BOTON DE SUB
     const suscripcionForm = document.getElementById('suscripcionForm');
     
-    // Verifica si el formulario existe
+    // REVISA SI ES UN CORREO
     if (suscripcionForm) {
         suscripcionForm.addEventListener('submit', function(e) {
             e.preventDefault();

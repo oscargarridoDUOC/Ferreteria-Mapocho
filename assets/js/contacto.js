@@ -1,36 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     const formContacto = document.getElementById("formContacto");
 
+    if (!formContacto) {
+        console.error('No se encontró el formulario con ID "formContacto".');
+        return;
+    }
+
     formContacto.addEventListener('submit', function(e) {
-        e.preventDefault(); // Evita que el formulario se envíe automáticamente
+        e.preventDefault();
 
-        let nombre = document.getElementById("nombreCompleto").value;
-        let correo = document.getElementById("correo").value;
-        let contenido = document.getElementById("contenido").value;
-
-        // Validaciones
-        const esNombreValido = validarFull("nombre", nombre);
-        const esCorreoValido = validarFull("correo", correo);
-        const esContenidoValido = validarFull("contenido", contenido);
-
-        if (esNombreValido && esCorreoValido && esContenidoValido) {
-            alert("¡Mensaje enviado correctamente!");
-            formContacto.reset(); // Limpia el formulario
-            window.location.href = "/index.html"; // Asegúrate de que esta ruta sea correcta
+        // Obtenemos los valores de los campos directamente
+        const nombre = document.getElementById("nombreCompleto").value.trim();
+        const correo = document.getElementById("correo").value.trim();
+        const contenido = document.getElementById("contenido").value.trim();
+        
+        // VALIDACIÓN DE DATOS
+        if (nombre === "" || correo === "" || contenido === "") {
+            alert("Todos los campos son obligatorios. Por favor, completa el formulario.");
+            return;
         }
+        
+        alert("¡Mensaje enviado correctamente!");
+        formContacto.reset();
+        window.location.href = "/index.html"; 
     });
 });
-
-
-function validarFull(atributo, valor) {
-    if (validarCampos(valor)) {
-        return true;
-    } else {
-        alert(`El campo ${atributo} está vacío.`);
-        return false;
-    }
-}
-
-function validarCampos(texto) {
-    return texto.trim() !== "";
-}

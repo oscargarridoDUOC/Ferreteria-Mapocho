@@ -1,3 +1,4 @@
+// ARRAY CON LOS PRODUCTOS Y SUS ATRIBUTOS
 const productos = [
     {
         id: 1,

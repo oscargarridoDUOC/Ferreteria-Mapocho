@@ -1,0 +1,105 @@
+/* Colores corporativos en variables */
+:root {
+    --color-fondo: #F2F0ED;      /* Gris cálido/Topo para el fondo de la página */
+    --color-tarjeta: #FFFFFF;    /* Blanco puro para tarjetas y contenido principal */
+    --color-primario: #B85C38;   /* Naranja terracota para énfasis (botones) */
+    --color-secundario: #4D4D4D; /* Gris oscuro para texto y estructura */
+    --color-texto-claro: #F8F9FA;/* Gris muy claro para texto sobre fondos oscuros */
+}
+
+/* Estilo para el cuerpo de la página */
+body {
+    background-color: var(--color-fondo);
+}
+
+/* Estilo para el encabezado y la navegación */
+#navigator {
+    background-color: var(--color-secundario) !important;
+    border-bottom: none; /* Quitamos el borde para un look más limpio */
+}
+
+/* Estilo para los botones de Registro y Login */
+.d-flex.justify-content-end a.btn-primary {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}   
+
+.d-flex.justify-content-end a.btn-outline-secondary {
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+}
+
+.d-flex.justify-content-end a.btn-outline-secondary:hover {
+    background-color: var(--color-primario);
+    color: var(--color-claro);
+}
+
+/* Estilo para la tarjeta principal del contenido */
+.card {
+    background-color: var(--color-tarjeta);
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Borde casi invisible */
+    border-radius: 0.75rem; /* Bordes más redondeados para un look suave */
+}
+
+/* Títulos y texto general dentro del contenido claro */
+h1, h2, h3, h4, h5, .card-title {
+    color: var(--color-secundario);
+}
+
+/* Estilo para los textos mutados (ahora más contrastados) */
+.text-muted {
+    color: var(--color-secundario) !important;
+}
+
+/* Botones principales de la página */
+.btn-primary, .btn-primary:hover, .btn-primary:active {
+    background-color: var(--color-primario) !important;
+    border-color: var(--color-primario) !important;
+    color: var(--color-tarjeta) !important;
+}
+
+/* Estilo para los botones de contorno, como en "Ver productos" */
+.btn-outline-secondary {
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-primario);
+    color: var(--color-tarjeta);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-secundario) !important;
+    color: var(--color-texto-oscuro);
+    border-top: none; /* Quitamos el borde */
+}
+
+/* Ajustes de color para enlaces y texto en el navbar y footer */
+.navbar-brand, .navbar-nav .nav-link, footer p, footer a {
+    color: var(--color-texto-claro) !important;
+}
+
+.navbar-nav .nav-link:hover, footer a:hover {
+    color: var(--color-primario) !important;
+}
+
+/* Estilo para el ícono del carrito */
+#cart {
+    color: var(--color-texto-claro) !important;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para el contador del carrito (badge) */
+#cuenta-carrito {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 0.25em 0.6em;
+    border-radius: 50%;
+    margin-left: 5px;
+}

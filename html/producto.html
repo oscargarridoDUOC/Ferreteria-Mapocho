@@ -5,11 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>test - producto</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body class="d-flex flex-column min-vh-100">
+        <!-- INSERCIÓN NAVBAR-->
         <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navigator"></nav>
         </header>
+        <!-- PRODUCTO SELECCIONADO-->
         <main>
             <div>
                 <h2 style="text-align: center;" class="m-2 p-2">Ferretería Mapocho</h2>
@@ -19,13 +22,15 @@
                     volver
                 </a>
             </div>
+            
             <div class="container-fluid">
                 <div class="row">
+                    <!-- INSERCIÓN CARROUSEL-->
                     <div class="col-sm-7">
                         <div class="card border-4">
                             <div id="carouselExample" class="carousel carousel-dark slide mx-auto" style="max-width: 100%; height: 30rem;">
                                 <div class="carousel-inner h-100" id="carousel-imagenes">
-                                    </div>
+                                </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
@@ -37,6 +42,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- INSERCIÓN DESCRIPCION PRODUCTO-->
                     <div class="col-md-4">
                         <div class="card shadow-sm border-0 p-3">
                             <h3 class="fw-bold mb-3 pb-2 border-bottom" id="tituloProducto"></h3>
@@ -50,11 +56,12 @@
                 </div>
             </div>
         </main>
+        <!-- INSERCIÓN FOOTER-->
         <footer class="bg-light border-top py-4 mt-auto">
             <div class="container py-4" id="footer"></div>
         </footer>
         
-    </body>
+        </body>
     <script src="/assets/js/arrayProductos.js"></script>
     <script src="/assets/js/producto.js"></script>
     <script src="/assets/js/navFooter.js"></script>
