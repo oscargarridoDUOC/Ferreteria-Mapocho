@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
 
-    if (!formLogin || !emailInput || !passwordInput) {
-        console.error('Uno o más elementos del formulario no fueron encontrados. Revisa los ID.');
-        return;
-    }
-
     // VALIDACIÓN DE INICIO DE SESIÓN
     const mensajeLogin = document.createElement('div');
     mensajeLogin.className = 'mt-2 text-center';
@@ -31,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const usuario = usuarios.find(u => u.correo === correo && u.contraseña === contraseña);
 
         if (usuario) {
-            mensajeLogin.textContent = '¡Has iniciado sesión exitosamente! 🎉';
+            mensajeLogin.textContent = '¡Has iniciado sesión exitosamente!';
             mensajeLogin.style.color = 'green';
             
             // REDIRIGE AL USUARIO
@@ -40,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = '/index.html';
             }, 500);
         } else {
-            mensajeLogin.textContent = 'Usuario o contraseña incorrecta 😞';
+            mensajeLogin.textContent = 'Usuario o contraseña incorrecta';
             mensajeLogin.style.color = 'red';
         }
     });

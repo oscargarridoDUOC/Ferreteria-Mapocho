@@ -1,11 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const formContacto = document.getElementById("formContacto");
 
-    if (!formContacto) {
-        console.error('No se encontró el formulario con ID "formContacto".');
-        return;
-    }
-
     formContacto.addEventListener('submit', function(e) {
         e.preventDefault();
 

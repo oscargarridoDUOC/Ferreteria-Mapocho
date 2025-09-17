@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initEventListeners();
     renderCart();
 });
-// CARGA EL CARRITO DESDE EL LOCALSTORAGE
+// CARGA EL CARRITO DESDE EL LOCALSTORAGE O LISTA VACIA
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // BUSCA LOS ELEMENTO YA CARGADOS PARA NO REPETIR

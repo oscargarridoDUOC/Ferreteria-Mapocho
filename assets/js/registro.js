@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Toda la lógica que interactúa con el DOM debe ir aquí dentro
     const formRegistro = document.getElementById('formRegistro');
 
-    // Verifica si el formulario existe antes de continuar
     if (formRegistro) {
         const mensajeRegistro = document.createElement('div');
-        mensajeRegistro.style.marginTop = "10px";
         formRegistro.appendChild(mensajeRegistro);
 
         formRegistro.addEventListener('submit', function(e) {
@@ -16,32 +13,35 @@ document.addEventListener('DOMContentLoaded', () => {
             const contraseña = document.getElementById('password').value;
             const confirmarContraseña = document.getElementById('confirmPassword').value;
 
+            const errores = [];
+            
+            // VALIDACION DEL FORMULARIO
             if (correo !== confirmarCorreo) {
-                mensajeRegistro.textContent = "Los correos no coinciden";
-                mensajeRegistro.style.color = "red";
-                return;
+                errores.push("Los correos no coinciden.");
             }
 
             if (!(correo.endsWith("@duocuc.cl") || correo.endsWith("@profesor.duocuc.cl"))) {
-                mensajeRegistro.textContent = "Solo se permiten correos @duocuc.cl o @profesor.duocuc.cl";
-                mensajeRegistro.style.color = "red";
-                return;
+                errores.push("Solo se permiten correos @duocuc.cl o @profesor.duocuc.cl.");
             }
 
             if (contraseña !== confirmarContraseña) {
-                mensajeRegistro.textContent = "Las contraseñas no coinciden";
-                mensajeRegistro.style.color = "red";
-                return;
+                errores.push("Las contraseñas no coinciden.");
             }
 
             let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
             if (usuarios.some(u => u.correo === correo)) {
-                mensajeRegistro.textContent = "Este correo ya está registrado";
+                errores.push("Este correo ya está registrado.");
+            }
+
+            // NO RETORNA NADA CUANDO HAY ERRORES
+            if (errores.length > 0) {
+                mensajeRegistro.textContent = errores.join(" ");
                 mensajeRegistro.style.color = "red";
                 return;
             }
 
+            // REGISTRA CUANDO NO HAY ERRORES
             usuarios.push({ correo, contraseña });
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
